@@ -1,0 +1,351 @@
+.app-container {
+  max-width: 700px;
+  margin: 2rem auto 3rem;
+  padding: 1rem 1.5rem 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #3949ab;
+  user-select: none;
+}
+
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.8rem;
+}
+
+.new-app-input {
+  flex: 1 1 200px; /* flexible but minimum 200px width */
+  max-width: 280px;
+  padding: 0.5rem 0.8rem;
+  font-size: 1rem;
+  border: 2px solid #3949ab;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.new-app-input:focus {
+  outline: none;
+  border-color: #222c5c;
+}
+
+.add-app-btn,
+.add-timer-btn,
+.clear-all-btn {
+  padding: 0.55rem 1.25rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-app-btn {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.add-app-btn:hover {
+  background-color: #225522;
+}
+
+.add-timer-btn {
+  background-color: #3949ab;
+  color: white;
+}
+
+.add-timer-btn:hover {
+  background-color: #222c5c;
+}
+
+.clear-all-btn {
+  background-color: #b00020;
+  color: white;
+}
+
+.clear-all-btn:hover {
+  background-color: #780014;
+}
+
+/* Responsive: stack controls vertically on narrow screens */
+@media (max-width: 550px) {
+  .top-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .new-app-input,
+  .add-app-btn,
+  .add-timer-btn,
+  .clear-all-btn {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+
+
+
+
+
+.timers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.timer-card {
+  border: 1px solid #c1c9ff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 3px 10px rgba(57, 73, 171, 0.1);
+  background: white;
+}
+
+.timer-card select,
+.timer-card input[type='text'] {
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1.5px solid #3949ab;
+  min-width: 140px;
+  flex-grow: 1;
+  transition: border-color 0.3s ease;
+}
+
+.timer-card select:focus,
+.timer-card input[type='text']:focus {
+  outline: none;
+  border-color: #222c5c;
+}
+
+.timer-card select:disabled,
+.timer-card input[disabled] {
+  background-color: #eee;
+  cursor: not-allowed;
+  color: #666;
+}
+
+.team-member-input {
+  min-width: 170px;
+}
+
+.timer-buttons {
+  display: flex;
+  gap: 0.65rem;
+}
+
+.timer-buttons button {
+  padding: 0.45rem 1.1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  background-color: #3949ab;
+  transition: background-color 0.3s ease;
+}
+
+.timer-buttons button:hover:enabled {
+  background-color: #222c5c;
+}
+
+.timer-display {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.2rem;
+  min-width: 95px;
+  user-select: none;
+  color: #3949ab;
+  text-align: center;
+}
+
+.add-timer-btn:hover {
+  background-color: #225522;
+}
+
+.task-list-wrap {
+  width: 100%;
+  padding-top: 1rem;
+  border-top: 3px solid #3949ab;
+  user-select: text;
+}
+
+.app-section {
+  margin-bottom: 1.75rem;
+}
+
+.app-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+.task-list {
+  list-style: none;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+.task-entry {
+  border: none;
+  text-decoration: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-entry em {
+  font-style: italic;
+  color: #000000;
+  margin-left: 8px;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  user-select: none;
+}
+
+.manage-toggle-btn {
+  background-color: #3949ab;
+  color: white;
+  padding: 0.4rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.manage-toggle-btn:hover {
+  background-color: #222c5c;
+}
+
+.manage-panel {
+  border: 1px solid #3949ab;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+  background: #f5f6fc;
+}
+
+.manage-group {
+  margin-bottom: 1.5rem;
+}
+
+.manage-group h2 {
+  color: #222c5c;
+  margin-bottom: 0.8rem;
+}
+
+.manage-list {
+  max-height: 180px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+  background: white;
+  padding: 0.25rem 0.5rem;
+}
+
+.manage-item {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.manage-item input[type="text"] {
+  flex-grow: 1;
+  padding: 4px 8px;
+  border: 1px solid #3949ab;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.manage-item button {
+  background-color: #b00020;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manage-item button:hover {
+  background-color: #780014;
+}
+
+.manage-add {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.manage-add input[type="text"] {
+  flex-grow: 1;
+  padding: 6px 10px;
+  border: 2px solid #3949ab;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.manage-add button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+.manage-add button:hover {
+  background-color: #225522;
+}
+
+.task-entry button {
+  margin-left: 12px;
+  background-color: #3949ab;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 2px 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.task-entry button:hover {
+  background-color: #222c5c;
+}
+
+.task-entry em {
+  margin-left: 6px;
+  font-style: italic;
+  color: #555;
+}
