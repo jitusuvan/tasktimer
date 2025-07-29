@@ -114,7 +114,7 @@ const TaskItem: React.FC<Props> = ({
       role="button"
     >
       {formatTaskDuration(task.durationSeconds)} - {task.taskName}{' '}
-      {task.teamMember ? <em>(Team: {task.teamMember})</em> : null}
+{/*       {task.teamMember ? <em>(Team: {task.teamMember})</em> : null} */}
     </li>
   );
 };
